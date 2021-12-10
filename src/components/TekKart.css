@@ -1,0 +1,44 @@
+.kart {
+  position: relative;
+}
+.kart img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 6px;
+}
+/*Kartın ön tarafı - fotoğraf kısmı yani  */
+.kart .on {
+  transform: rotateY(90deg);
+  transition: all ease-in 0.2s;
+  position: absolute;
+}
+.flipped {
+  pointer-events: none;
+}
+.flipped .on {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+/*Kartın arka tarafı - cover kısmı yani  */
+.card .arka {
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+.flipped .arka {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 4s, opacity 4s linear;
+}
+
+.bilgi {
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+}
